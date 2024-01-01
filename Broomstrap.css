@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Handlee&family=Pangolin&family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Handlee&family=Lora&family=Pangolin&family=Special+Elite&display=swap');
 .blackboard{
 background-color: black;
 padding: 30px;
@@ -7,10 +7,34 @@ border: #2e1a12 solid 8px;
 margin: 15px;
 color: #E8E8E8;
 }
+.BTop{
+    -webkit-mask-image: url(https://bowkerdrew.github.io/9_Top.png); 
+    background: url(https://bowkerdrew.github.io/bg.png)center;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 50px;
+    -webkit-mask-size: 100% 100%;
+    border-bottom: 4px solid rgba(0,0,0,0.2)
+}
+.BBot{
+    -webkit-mask-image: url(https://bowkerdrew.github.io/7.png); 
+    background: url(https://bowkerdrew.github.io/bg.png)center;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 150px;
+    -webkit-mask-size: 100% 100%;
+    border-bottom: 4px solid rgba(0,0,0,0.2)
+}
 .handlee{
 font-family: 'handlee';
 }
-
+.lora{
+font-family: 'lora';
+}
 .pangolin{
 font-family: 'pangolin';
 }
