@@ -1,11 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Handlee&family=Pangolin&family=Special+Elite&display=swap');
-
 .blackboard{
-font-family: 'East Sea Dokdo';
-color: white;
 background-color: black;
 padding: 30px;
 font-size: 2em;
 border: #2e1a12 solid 8px;
 margin: 15px;
+
+}
+.chalk{
+color: #E8E8E8;
+}
+.handlee{
+font-family: 'handlee';
+}
+
+.pangolin{
+font-family: 'pangolin';
+}
+.esd{
+font-family: 'East Sea Dokdo';
 }
