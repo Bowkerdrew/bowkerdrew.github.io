@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Handlee&family=Lora&family=Pangolin&family=Special+Elite&display=swap');
+:root{
+	--bg: #FCF5E5;
+	
+}
 .body{
     margin: auto;
     width: 550px;
     border: 1px solid rgba(0,0,0,0.2);
-    background: #FCF5E5;
+    background: var(--bg);
 }
 .header{
     color: #B7B7B7;
@@ -70,7 +74,7 @@ hr {
 }
 
 hr::after {
-  background: #FCF5E5;
+  background: var(--bg);
   content: 'ᚨᛒᚲᛞᛖᚠᚷᚺᛁᛃᛚᛗᚾᛟᚱᛊᛏᚢᚹᛁᛉ';
   padding: 0 4px;
   position: relative;
