@@ -33,7 +33,7 @@ color: #244aa3;
         font-size: 12px
     }
     ul li:before {
-          content: "— ";
+          content: "× ";
           text-indent: -5px
     }
 .text{
