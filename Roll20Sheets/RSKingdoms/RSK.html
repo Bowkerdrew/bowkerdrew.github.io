@@ -1,0 +1,284 @@
+<main>
+  <section class="header f-center">
+    <h1>Runescape Kingdoms</h1>
+    <span>
+      <div style="display: inline-block; margin: 5px;"><label>Character name: <input name="attr_character_name" type="text" style="width: 100px;"></label></div > <div style="display: inline-block; margin: 5px;"><label>Player: <input name="attr_class" list="class" type="text" style="width: 100px;"></label></div> <div style="display: inline-block; margin: 5px;"> <button type="roll" name="roll_basic" value="&{template:rolls} {{title=Roll}} {{subtitle=@{character_name} }} {{roll= [[?{roll type| Normal, 3d6| Advantage,4d6dh1 | Disadvantage, 4d6dl1}]]}}">Basic Roll </button><br></div><br></span>
+  </section>
+
+  <section class="common">
+      
+      
+      <br>
+    <div style="display: inline-block; margin: 5px;">
+    <h3>Motivation</h3>
+    <textarea name="attr_motivation" style="height: 50px; width: 150px;"></textarea>
+  </div><div style="display: inline-block; margin: 5px;">
+    <h3>Catalyst</h3>
+    <textarea name="attr_catalyst" style="height: 50px; width: 150px;"></textarea>
+  </div><div style="display: inline-block; margin: 5px;">
+    <h3>Background</h3>
+    <textarea name="attr_background" style="height: 50px; width: 150px;"></textarea>
+    </div><br>
+    <div style="display: inline-block; margin: 5px;"><label>Life Points: <input type="number" name="attr_hp" value="39"> / <input type="number" name="attr_hp_max" value="39"></label></div>
+    <div style="display: inline-block; margin: 5px;"><label>Summoning Points: <input type="number" name="attr_sp" value="5"> / <input type="number" name="attr_sp_max" value="5"></label></div>
+    <div style="display: inline-block; margin: 5px;"><label>Prayer Points: <input type="number" name="attr_pp" value="3"> / <input type="number" name="attr_pp_max" value="3"></label></div>
+    <div style="display: inline-block; margin: 5px;"><label>Armour Value: <input type="number" name="attr_AV" value="1"></label></div>
+    
+    <br>
+    
+    <h3 style="float: left;">Attributes</h3><br>
+    <div class="f-row nowrap" style="display: inline-block; margin: 5px;">
+      <label>Strength</label>
+      <input type="number" name="attr_str" value="1">
+      
+    </div>
+
+    <div class="f-row nowrap" style="display: inline-block; margin: 5px;">
+      <label>Agility</label>
+      <input type="number" name="attr_agi" value="1">
+    </div>
+
+    <div class="f-row nowrap" style="display: inline-block; margin: 5px;">
+      <label>Intellect</label>
+      <input type="number" name="attr_int" value="1">
+    </div>
+  </section>
+
+  <section class="power f-col">
+      <h3>Skills</h3>
+      <div class="f-col nowrap">
+        <label>Archaeology </label>
+        <div class="f-row nowrap">
+          <input type="checkbox" name="attr_c_archaeology">
+          <input type="number" name="attr_archaeology" value="1">
+          <button type="roll" name="roll_archaeology" value="&{template:rolls} {{title=Archaeology}} {{subtitle=@{character_name}}} {{roll= [[?{roll type| Normal, 3d6| Advantage,4d6dh1 | Disadvantage, 4d6dl1}]]}} {{Target= [[@{Archaeology}+?{Attribute| Strength,@{str}|Agility, @{agi}|Intellect,@{int}}]]}}"></button>
+
+</div>
+      </div>
+      <div class="f-col nowrap">
+        <label>Attack </label>
+        <div class="f-row nowrap">
+          <input type="checkbox" name="attr_c_attack">
+          <input type="number" name="attr_attack" value="1">
+          <button type="roll" name="roll_attack" value="&{template:rolls} {{title=Attack}} {{subtitle=@{character_name}}} {{roll= [[?{roll type| Normal, 3d6| Advantage,4d6dh1 | Disadvantage, 4d6dl1}]]}} {{Target= [[@{Attack}+?{Attribute| Strength,@{str}|Agility, @{agi}|Intellect,@{int}}]]}}"></button>
+
+        </div>
+      </div>
+      <div class="f-col nowrap">
+        <label>Cooking </label>
+        <div class="f-row nowrap">
+          <input type="checkbox" name="attr_c_cooking">
+          <input type="number" name="attr_cooking" value="1">
+          <button type="roll" name="roll_cooking" value="&{template:rolls} {{title=Cooking}} {{subtitle=@{character_name}}} {{roll= [[?{roll type| Normal, 3d6| Advantage,4d6dh1 | Disadvantage, 4d6dl1}]]}} {{Target= [[@{Cooking}+?{Attribute| Strength,@{str}|Agility, @{agi}|Intellect,@{int}}]]}}"></button>
+
+        </div>
+      </div>   
+      <div class="f-col nowrap">
+          <label>Defence </label>
+          <div class="f-row nowrap">
+              <input type="checkbox" name="attr_c_defence">
+            <input type="number" name="attr_defence" value="1">
+            <button type="roll" name="roll_defence_skill" value="&{template:rolls} {{title=Defence}} {{subtitle=@{character_name}}} {{roll= [[?{roll type| Normal, 3d6| Advantage,4d6dh1 | Disadvantage, 4d6dl1}]]}} {{Target= [[@{Defence}+?{Attribute| Strength,@{str}|Agility, @{agi}|Intellect,@{int}}]]}}"></button>
+
+          </div>
+        </div>   
+        <div class="f-col nowrap">
+          <label>Dungeoneering </label>
+          <div class="f-row nowrap">
+              <input type="checkbox" name="attr_c_dungeoneering">
+            <input type="number" name="attr_dungeoneering" value="1">
+            <button type="roll" name="roll_dungeoneering" value="&{template:rolls} {{title=Dungeoneering}} {{subtitle=@{character_name}}} {{roll= [[?{roll type| Normal, 3d6| Advantage,4d6dh1 | Disadvantage, 4d6dl1}]]}} {{Target= [[@{Dungeoneering}+?{Attribute| Strength,@{str}|Agility, @{agi}|Intellect,@{int}}]]}}"></button>
+
+          </div>
+        </div>   
+        <div class="f-col nowrap">
+          <label>Farming </label>
+          <div class="f-row nowrap">
+              <input type="checkbox" name="attr_c_farming" value="1">
+            <input type="number" name="attr_farming" value="1">
+            <button type="roll" name="roll_farming" value="&{template:rolls} {{title=Farming}} {{subtitle=@{character_name}}} {{roll= [[?{roll type| Normal, 3d6| Advantage,4d6dh1 | Disadvantage, 4d6dl1}]]}} {{Target= [[@{Farming}+?{Attribute| Strength,@{str}|Agility, @{agi}|Intellect,@{int}}]]}}"></button>
+
+          </div>
+        </div>   
+        <div class="f-col nowrap">
+          <label>Fishing </label>
+          <div class="f-row nowrap">
+              <input type="checkbox"  name="attr_c_fishing" value="1">
+            <input type="number" name="attr_fishing" value="1">
+            <button type="roll" name="roll_fishing" value="&{template:rolls} {{title=Fishing}} {{subtitle=@{character_name}}} {{roll= [[?{roll type| Normal, 3d6| Advantage,4d6dh1 | Disadvantage, 4d6dl1}]]}} {{Target= [[@{Fishing}+?{Attribute| Strength,@{str}|Agility, @{agi}|Intellect,@{int}}]]}}"></button>
+
+          </div>
+        </div>   
+        <div class="f-col nowrap">
+          <label>Fletching </label>
+          <div class="f-row nowrap">
+              <input type="checkbox" name="attr_c_fletching" value="1">
+            <input type="number" name="attr_fletching" value="1">
+            <button type="roll" name="roll_fletching" value="&{template:rolls} {{title=Fletching}} {{subtitle=@{character_name}}} {{roll= [[?{roll type| Normal, 3d6| Advantage,4d6dh1 | Disadvantage, 4d6dl1}]]}} {{Target= [[@{Fletching}+?{Attribute| Strength,@{str}|Agility, @{agi}|Intellect,@{int}}]]}}"></button>
+
+          </div>
+        </div>   
+        <div class="f-col nowrap">
+          <label>Herblore </label>
+          <div class="f-row nowrap">
+              <input type="checkbox" name="attr_c_herblore" value="1">
+            <input type="number" name="attr_herblore" value="1">
+            <button type="roll" name="roll_herblore" value="&{template:rolls} {{title=Herblore}} {{subtitle=@{character_name}}} {{roll= [[?{roll type| Normal, 3d6| Advantage,4d6dh1 | Disadvantage, 4d6dl1}]]}} {{Target= [[@{Herblore}+?{Attribute| Strength,@{str}|Agility, @{agi}|Intellect,@{int}}]]}}"></button>
+
+          </div>
+        </div>   
+        <div class="f-col nowrap">
+          <label>Hunter </label>
+          <div class="f-row nowrap">
+              <input type="checkbox" name="attr_c_hunter" value="1">
+            <input type="number" name="attr_hunter" value="1">
+            <button type="roll" name="roll_hunter" value="&{template:rolls} {{title=Hunter}} {{subtitle=@{character_name}}} {{roll= [[?{roll type| Normal, 3d6| Advantage,4d6dh1 | Disadvantage, 4d6dl1}]]}} {{Target= [[@{Hunter}+?{Attribute| Strength,@{str}|Agility, @{agi}|Intellect,@{int}}]]}}"></button>
+
+          </div>
+        </div>   
+        <div class="f-col nowrap">
+          <label>Magic </label>
+          <div class="f-row nowrap">
+              <input type="checkbox" name="attr_c_magic" value="1">
+            <input type="number" name="attr_magic" value="1">
+            <button type="roll" name="roll_magic" value="&{template:rolls} {{title=Magic}} {{subtitle=@{character_name}}} {{roll= [[?{roll type| Normal, 3d6| Advantage,4d6dh1 | Disadvantage, 4d6dl1}]]}} {{Target= [[@{Magic}+?{Attribute| Strength,@{str}|Agility, @{agi}|Intellect,@{int}}]]}}"></button>
+
+          </div>
+        </div>   
+        <div class="f-col nowrap">
+          <label>Mining </label>
+          <div class="f-row nowrap">
+              <input type="checkbox" name="attr_c_mining" value="1">
+            <input type="number" name="attr_mining" value="1">
+            <button type="roll" name="roll_mining" value="&{template:rolls} {{title=Mining}} {{subtitle=@{character_name}}} {{roll= [[?{roll type| Normal, 3d6| Advantage,4d6dh1 | Disadvantage, 4d6dl1}]]}} {{Target= [[@{Mining}+?{Attribute| Strength,@{str}|Agility, @{agi}|Intellect,@{int}}]]}}"></button>
+
+          </div>
+        </div>   
+        <div class="f-col nowrap">
+          <label>Prayer </label>
+          <div class="f-row nowrap">
+              <input type="checkbox" name="attr_c_prayer" value="1">
+            <input type="number" name="attr_prayer" value="1">
+            <button type="roll" name="roll_prayer" value="&{template:rolls} {{title=Prayer}} {{subtitle=@{character_name}}} {{roll= [[?{roll type| Normal, 3d6| Advantage,4d6dh1 | Disadvantage, 4d6dl1}]]}} {{Target= [[@{Prayer}+?{Attribute| Strength,@{str}|Agility, @{agi}|Intellect,@{int}}]]}}"></button>
+
+          </div>
+        </div>   
+        <div class="f-col nowrap">
+          <label>Ranged </label>
+          <div class="f-row nowrap">
+              <input type="checkbox" name="attr_c_ranged" value="1">
+            <input type="number" name="attr_ranged" value="1">
+            <button type="roll" name="roll_ranged" value="&{template:rolls} {{title=Ranged}} {{subtitle=@{character_name}}} {{roll= [[?{roll type| Normal, 3d6| Advantage,4d6dh1 | Disadvantage, 4d6dl1}]]}} {{Target= [[@{Ranged}+?{Attribute| Strength,@{str}|Agility, @{agi}|Intellect,@{int}}]]}}"></button>
+
+          </div>
+        </div>   
+        <div class="f-col nowrap">
+          <label>Runecrafting </label>
+          <div class="f-row nowrap">
+              <input type="checkbox" name="attr_c_runecrafting" value="1">
+            <input type="number" name="attr_runecrafting" value="1">
+            <button type="roll" name="roll_runecrafting" value="&{template:rolls} {{title=Runecrafting}} {{subtitle=@{character_name}}} {{roll= [[?{roll type| Normal, 3d6| Advantage,4d6dh1 | Disadvantage, 4d6dl1}]]}} {{Target= [[@{Runecrafting}+?{Attribute| Strength,@{str}|Agility, @{agi}|Intellect,@{int}}]]}}"></button>
+
+          </div>
+        </div>   
+        <div class="f-col nowrap">
+          <label>Slayer </label>
+          <div class="f-row nowrap">
+              <input type="checkbox" name="attr_c_slayer" value="1">
+            <input type="number" name="attr_slayer" value="1">
+            <button type="roll" name="roll_slayer" value="&{template:rolls} {{title=Slayer}} {{subtitle=@{character_name}}} {{roll= [[?{roll type| Normal, 3d6| Advantage,4d6dh1 | Disadvantage, 4d6dl1}]]}} {{Target= [[@{Slayer}+?{Attribute| Strength,@{str}|Agility, @{agi}|Intellect,@{int}}]]}}"></button>
+
+          </div>
+        </div>   
+        <div class="f-col nowrap">
+          <label>Smithing </label>
+          <div class="f-row nowrap">
+              <input type="checkbox" name="attr_c_smithing" value="1">
+            <input type="number" name="attr_smithing" value="1">
+            <button type="roll" name="roll_smithing" value="&{template:rolls} {{title=Smithing}} {{subtitle=@{character_name}}} {{roll= [[?{roll type| Normal, 3d6| Advantage,4d6dh1 | Disadvantage, 4d6dl1}]]}} {{Target= [[@{Smithing}+?{Attribute| Strength,@{str}|Agility, @{agi}|Intellect,@{int}}]]}}"></button>
+
+          </div>
+        </div>   
+        <div class="f-col nowrap">
+          <label>Summoning </label>
+          <div class="f-row nowrap">
+              <input type="checkbox" name="attr_c_summoning" value="1">
+            <input type="number" name="attr_summoning" value="1">
+            <button type="roll" name="roll_summoning" value="&{template:rolls} {{title=Summoning}} {{subtitle=@{character_name}}} {{roll= [[?{roll type| Normal, 3d6| Advantage,4d6dh1 | Disadvantage, 4d6dl1}]]}} {{Target= [[@{Summoning}+?{Attribute| Strength,@{str}|Agility, @{agi}|Intellect,@{int}}]]}}"></button>
+
+          </div>
+        </div>   
+        <div class="f-col nowrap">
+          <label>Thieving </label>
+          <div class="f-row nowrap">
+              <input type="checkbox" name="attr_c_thieving" value="1">
+            <input type="number" name="attr_thieving" value="1">
+            <button type="roll" name="roll_thieving" value="&{template:rolls} {{title=Thieving}} {{subtitle=@{character_name}}} {{roll= [[?{roll type| Normal, 3d6| Advantage,4d6dh1 | Disadvantage, 4d6dl1} ]]}} {{Target= [[@{Thieving}+?{Attribute| Strength,@{str}|Agility, @{agi}|Intellect,@{int}}]]}}"></button>
+
+          </div>
+        </div>   
+        <div class="f-col nowrap">
+          <label>Woodcutting </label>
+          <div class="f-row nowrap">
+              <input type="checkbox" name="attr_c_woodcutting" value="1">
+            <input type="number" name="attr_woodcutting" value="1">
+            <button type="roll" name="roll_woodcutting" value="&{template:rolls} {{title=Archaeology}} {{subtitle=@{character_name}}} {{roll= [[?{roll type| Normal, 3d6| Advantage,4d6dh1 | Disadvantage, 4d6dl1} ]]}} {{Target= [[@{woodcutting}+?{Attribute| Strength,@{str}|Agility, @{agi}|Intellect,@{int}}]]}}"></button>
+            
+          </div>
+        </div>   
+  </section>
+
+  <section class="inv">
+          <h3>Backpack</h3>
+          <textarea  name="attr_item" style="display: inline-block; margin: 5px; width:110px; height: 75px;"></textarea> <textarea  name="attr_item1" style="display: inline-block; margin: 5px; width:110px; height: 75px;"></textarea> <textarea  name="attr_item2" style="display: inline-block; margin: 5px;  width:110px; height: 75px;"></textarea> <textarea  name="attr_item3" style="display: inline-block; margin: 5px; width:110px; height: 75px;"></textarea><br>
+          <textarea  name="attr_item4" style="display: inline-block; margin: 5px; width:110px; height: 75px;"></textarea> <textarea  name="attr_item5" style="display: inline-block; margin: 5px; width:110px; height: 75px;"></textarea> <textarea  name="attr_item6" style="display: inline-block; margin: 5px;  width:110px; height: 75px;"></textarea> <textarea  name="attr_item7" style="display: inline-block; margin: 5px; width:110px; height: 75px;"></textarea><br>
+          <textarea  name="attr_item8" style="display: inline-block; margin: 5px; width:110px; height: 75px;"></textarea> <textarea  name="attr_item9" style="display: inline-block; margin: 5px; width:110px; height: 75px;"></textarea> <textarea  name="attr_item10" style="display: inline-block; margin: 5px;  width:110px; height: 75px;"></textarea> <textarea  name="attr_item11" style="display: inline-block; margin: 5px; width:110px; height: 75px;"></textarea><br>
+          <textarea  name="attr_item12" style="display: inline-block; margin: 5px; width:110px; height: 75px;"></textarea> <textarea  name="attr_item13" style="display: inline-block; margin: 5px; width:110px; height: 75px;"></textarea> <textarea  name="attr_item14" style="display: inline-block; margin: 5px;  width:110px; height: 75px;"></textarea> <textarea  name="attr_item15" style="display: inline-block; margin: 5px; width:110px; height: 75px;"></textarea><br>
+          <textarea  name="attr_item16" style="display: inline-block; margin: 5px; width:110px; height: 75px;"></textarea> <textarea  name="attr_item17" style="display: inline-block; margin: 5px; width:110px; height: 75px;"></textarea> <textarea  name="attr_item18" style="display: inline-block; margin: 5px;  width:110px; height: 75px;"></textarea> <textarea  name="attr_item19" style="display: inline-block; margin: 5px; width:110px; height: 75px;"></textarea><br>
+          <textarea  name="attr_item20" style="display: inline-block; margin: 5px; width:110px; height: 75px;"></textarea> <textarea  name="attr_item21" style="display: inline-block; margin: 5px; width:110px; height: 75px;"></textarea> <textarea  name="attr_item22" style="display: inline-block; margin: 5px;  width:110px; height: 75px;"></textarea> <textarea  name="attr_item23" style="display: inline-block; margin: 5px; width:110px; height: 75px;"></textarea><br>
+          <textarea  name="attr_item24" style="display: inline-block; margin: 5px; width:110px; height: 75px;"></textarea> <textarea  name="attr_item25" style="display: inline-block; margin: 5px; width:110px; height: 75px;"></textarea> <textarea  name="attr_item26" style="display: inline-block; margin: 5px;  width:110px; height: 75px;"></textarea> <textarea  name="attr_item27" style="display: inline-block; margin: 5px; width:110px; height: 75px;"></textarea><br>
+
+  </section>
+
+  <section class="misc">
+    
+    <div style="display: inline-block; margin: 5px; width:250px; height: 150px;"><h3>Head Armour</h3> Armour Value <input type="number" name="attr_head_armour_value" value="1"><textarea name="attr_head"></textarea></div><div style="display: inline-block; margin: 5px; width:250px; height: 150px;"><h3>Cape</h3><textarea name="attr_cape"></textarea></div><br>
+    <div style="display: inline-block; margin: 5px; width:250px; height: 150px;"><h3>Body Armour</h3> Armour Value <input type="number" name="attr_body_armour_value" value="1"><textarea name="attr_body"></textarea></div><div style="display: inline-block; margin: 5px; width:250px; height: 150px;"><h3>Arm/Weapon</h3> Effect <input name="attr_arm_effect" type="text" style="width: 60px;"> Damage <input type="number" name="attr_arm_dmg_value" value="1"> Armour Value <input type="number" name="attr_arm_armour_value" value="1">             <button type="roll" name="roll_arm_attack" value="&{template:rolls} {{title=Arm/Weapon Attack}} {{subtitle=@{character_name}}} {{roll= [[?{roll type| Normal, 3d6| Advantage,4d6dh1 | Disadvantage, 4d6dl1} ]]}} {{Target= [[?{Skill| Attack, @{Attack}|Ranged, @{Ranged}}+?{Attribute| Strength,@{str}|Agility, @{agi}}]]}} {{Damage = @{arm_dmg_value}}} {{Effect = @{arm_effect}}}"></button>
+       <textarea name="attr_arm"></textarea></div><br>
+    <div style="display: inline-block; margin: 5px; width:250px; height: 150px;"><h3>Leg Armour</h3> Armour Value <input type="number" name="attr_leg_armour_value" value="1"><textarea name="attr_leg"></textarea></div><div style="display: inline-block; margin: 5px; width:250px; height: 150px;"><h3>Weapon</h3> Effect <input name="attr_weapon_effect" type="text" style="width: 60px;"> Damage <input type="number" name="attr_weapon_dmg_value" value="1">             <button type="roll" name="roll_weapon_attack" value="&{template:rolls} {{title=Weapon Attack}} {{subtitle=@{character_name}}} {{roll= [[?{roll type| Normal, 3d6| Advantage,4d6dh1 | Disadvantage, 4d6dl1} ]]}} {{Target= [[?{Skill| Attack, @{Attack}|Ranged, @{Ranged}}+?{Attribute| Strength,@{str}|Agility, @{agi}}]]}} {{Damage = @{weapon_dmg_value}}} {{Effect = @{weapon_effect}}}"></button>
+       <textarea name="attr_weapon"></textarea></div>
+       
+       <button type="roll" name="roll_Defence" value="&{template:rolls} {{title=Defence Roll}} {{subtitle=@{character_name}}} {{roll= [[?{roll type| Normal, 3d6| Advantage,4d6dh1 | Disadvantage, 4d6dl1} ]]}} {{Target= [[@{Defence}+?{Attribute| Strength,@{str}|Agility, @{agi}}]]}} {{Armor = [[@{AV}]]}}"> Defence Roll </button>
+  </section>
+
+  <footer class="f-col f-center">
+    <span>Written by Ordo using grid template</span>
+  </footer>
+</main>
+
+<!-- Datalists & thing that don't show directly on sheet -->
+
+<datalist id="class">
+    <option value="Fighter">Fighter</option>
+    <option value="Mage">Mage</option>
+    <option value="Expert">Expert</option>
+</datalist>
+
+<!-- roll template -->
+
+<rolltemplate class="sheet-rolltemplate-rolls">
+  <div class="sheet-container">
+    <div class="sheet-header">
+      {{#title}}<div class="sheet-title">{{title}}</div>{{/title}}
+      {{#name}}<div class="sheet-name">{{name}}</div>{{/name}}
+      {{#subtitle}}<div class="sheet-subtitle">{{subtitle}}</div>{{/subtitle}}
+    </div>
+    <div class="sheet-content">
+      {{#allprops() title name subtitle desc}}
+      <div class="sheet-key">{{key}}</div>
+      <div class="sheet-value">{{value}}</div>
+      {{/allprops() title name subtitle desc}}
+      {{#desc}}<div class="sheet-desc">{{desc}}</div>{{/desc}}
+    </div>
+  </div>
+</rolltemplate>
